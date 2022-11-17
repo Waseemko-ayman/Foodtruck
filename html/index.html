@@ -25,25 +25,26 @@
 </head>
 <body>
     <!-- Start header -->
-    <header>
+    <header id="header">
         <div class="container">
             <nav>
                 <a href="home.html" class="logo flex">F<span>oo</span>dtruck</a>
                 <ul class="main-nav">
                     <li><a href="#" class="flex">Home</a></li>
                     <li><a href="#" class="flex">Menu</a></li>
-                    <li><a href="#" class="flex">About</a></li>
-                    <li><a href="#" class="flex">Shop</a></li>
-                    <li><a href="#" class="flex">Soecial</a></li>
-                    <li><a href="#" class="flex">Track your order</a></li>
+                    <li><a href="#about" class="flex">About</a></li>
+                    <li><a href="#shop" class="flex">Shop</a></li>
+                    <li><a href="#social" class="flex">Social</a></li>
+                    <li><a href="#menu" class="flex">Track your order</a></li>
                     <li><a href="#" class="flex">Contact</a></li>
                 </ul>
             </nav>
+            <i class="fa-solid fa-bars bars"></i>
             <div class="icons">
                 <ul>
-                    <li><a href="#" class="flex"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    <li><a href="#" class="flex"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="#" class="flex"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a href="#" class="flex" id="list"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="#" class="flex" id="list"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#" class="flex" id="list"><i class="fa-solid fa-basket-shopping"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -81,7 +82,7 @@
     <!-- End landing -->
 
     <!-- Start About us -->
-    <div class="about">
+    <div class="about" id="about">
         <div class="container flex">
             <div class="text title">
                 <span>About Us</span>
@@ -110,7 +111,7 @@
     <!-- End About us -->
 
     <!-- Start Choose -->
-    <div class="choose">
+    <div class="choose" id="shop">
         <div class="container">
             <div class="title">
                 <span>Good Food</span>
@@ -180,7 +181,7 @@
     <!-- End Taste -->
 
     <!-- Start Rates -->
-    <div class="rates">
+    <div class="rates flex" id="social">
         <div class="container">
             <div class="box">
                 <i class="fa-solid fa-kitchen-set"></i>
@@ -215,7 +216,7 @@
     <!-- End Rates -->
 
     <!-- Start Menu -->
-    <div class="menu">
+    <div class="menu" id="menu">
         <div class="container">
             <div class="title">
                 <span>Types Of Foods</span>
@@ -298,6 +299,98 @@
         </div>
     </div>
     <!-- End Menu -->
+
+    <!-- Start Chef -->
+    <div class="chef">
+        <div class="container">
+            <div class="title">
+                <span>Of</span>
+                <h2><span>Me</span>et Our Chef</h2>
+            </div>
+            <div class="images">
+                <div class="box">
+                    <div class="text">
+                        <h4>Mohamed Ali</h4>
+                        <p>professional chef</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h4>Samir Shbar</h4>
+                        <p>professional chef</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h4>Waseem Ayman</h4>
+                        <p>professional chef</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h4>Khaled Zorpa</h4>
+                        <p>professional chef</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Chef -->
+    
+    <!-- Start client Saying -->
+    <div class="say">
+        <div class="container">
+            <div class="title">
+                <span>Saying</span>
+                <h2><span>Wh</span>at our client are saying</h2>
+            </div>
+            <div class="box">
+                <img src="../images/saying.jpg" alt="">
+                <div class="text">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Officiis ex dolorum consequatur ipsum deleniti blanditiis 
+                        numquam perspiciatis tempore ducimus nemo repudiandae, reprehenderit 
+                        quos libero, quo consequuntur. Architecto fugiat mollitia iure.
+                    </p>
+                    <ul class="flex">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star-half-stroke"></i></li>
+                    </ul>
+                    <div>
+                        <h4>Laila Fayes</h4>
+                        <span>visitor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End client Saying -->
+
+    <!-- Start Information -->
+    <div class="information">
+        <div class="container">
+            <div class="title">
+                <span>The Quality & Food</span>
+                <h2><span>We</span> Document Every Food <br> Bean Process untile it is saved</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, 
+                    reprehenderit ipsa voluptatem repellendus repellat alias!
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+    </div>
+    <!-- End Information -->
+
+
+
+
+
+
     <script src="../javascript/foodtruck.js"></script>
 </body>
 </html>
