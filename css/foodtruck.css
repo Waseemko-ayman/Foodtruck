@@ -1176,3 +1176,137 @@ header .icons ul > li > a:hover {
     border-color: var(--orange-color);
 }
 /* End Information */
+
+/******************************************************************************************************/
+
+/* Start Latest */
+.latest {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.latest .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.latest .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.latest .box .unit {
+    border: 1px solid var(--white-color);
+}
+
+.latest .box .unit img {
+    max-width: 100%;
+}
+
+.latest .box .unit .text {
+    padding: 30px;
+}
+
+.latest .box .unit .text > span {
+    color: var(--orange-color);
+    font-family: 'Kolker Brush', cursive;
+    font-size: 30px;
+}
+
+.latest .box .unit .text p {
+    color: var(--white-color);
+    font-weight: bold;
+    margin: 10px 0 50px 0;
+    font-size: 18px;
+}
+
+.latest .box .unit .text div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+}
+
+.latest .box .unit .text div span {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.latest .box .unit .text div span:last-child {
+    color: var(--orange-color);
+    font-family: 'Kolker Brush', cursive;
+}
+/* End Latest */
+
+/******************************************************************************************************/
+
+/* Start Support */
+.support {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.support .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 100%;
+    width: 1050px;
+    margin: auto;
+    border-bottom: 1px solid var(--white-color);
+}
+
+@media (max-width: 991px) {
+    .support .box {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.support .box .title h2 {
+    font-size: 30px;
+}
+
+.support .box form {
+    gap: 10px;
+    background-color: var(--orange-color);
+    max-width: 100%;
+    width: 350px;
+}
+
+.support .box form input {
+    flex: 1;
+    color: var(--white-color);
+    background: none;
+    padding: 10px;
+    height: 25px;
+    border: none;
+    transition: var(--main-transition);
+}
+
+.support .box form input::placeholder {
+    color: var(--white-color);
+    transition: var(--main-transition);
+}
+
+.support .box form input:focus::placeholder {
+    opacity: 0;
+}
+
+.support .box form button {
+    color: var(--orange-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}
+/* End Support */
