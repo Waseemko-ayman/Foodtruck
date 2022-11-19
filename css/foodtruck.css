@@ -1310,3 +1310,105 @@ header .icons ul > li > a:hover {
     cursor: pointer;
 }
 /* End Support */
+
+/******************************************************************************************************/
+
+/* Start Footer */
+footer {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer h3 {
+    margin-bottom: 25px;
+}
+
+footer .text {
+    color: var(--white-color);
+    max-width: 100%;
+    width: 300px;
+}
+
+footer .text p {
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+footer .text .contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+footer .text .contact div {
+    width: 70px;
+    height: 60px;
+    background-color: var(--orange-color);
+    border-radius: 4px;
+}
+
+footer .text .contact div i {
+    font-size: 25px;
+    transform: rotate(-40deg);
+}
+
+footer .text .contact address span {
+    display: block;
+}
+
+footer .text .contact address span:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+footer .list {
+    color: var(--white-color);
+}
+
+footer ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    color: var(--white-color);
+    transition: var(--main-transition);
+}
+
+footer ul li a:hover {
+    padding-left: 10px;
+}
+
+footer .box {
+    color: var(--white-color);
+}
+
+footer .box .unit {
+    gap: 10px;
+}
+
+footer .box .unit:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+footer .box .unit h4 {
+    font-size: 15px;
+    color: gray;
+    font-weight: normal;
+}
+
+footer .box .unit p {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+footer .box .unit img {
+    max-width: 100%;
+    width: 50px;
+}
+/* End Footer */
