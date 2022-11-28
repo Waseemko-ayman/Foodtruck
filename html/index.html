@@ -26,9 +26,9 @@
 <body>
     <!-- Start header -->
     <header id="header">
-        <div class="container">
-            <nav>
-                <a href="home.html" class="logo flex">F<span>oo</span>dtruck</a>
+        <div class="container between-flex">
+            <nav class="align-flex">
+                <a href="index.html" class="logo flex">F<span>oo</span>dtruck</a>
                 <ul class="main-nav">
                     <li><a href="#" class="flex">Home</a></li>
                     <li><a href="#" class="flex">Menu</a></li>
@@ -39,7 +39,26 @@
                     <li><a href="#" class="flex">Contact</a></li>
                 </ul>
             </nav>
-            <i class="fa-solid fa-bars bars"></i>
+            <i class="fa-solid fa-bars bars">
+                <div class="parent-menu">
+                    <ul class="child-list">
+                        <li><a href="#" class="flex">Home</a></li>
+                        <li><a href="#" class="flex">Menu</a></li>
+                        <li><a href="#about" class="flex">About</a></li>
+                        <li><a href="#shop" class="flex">Shop</a></li>
+                        <li><a href="#social" class="flex">Social</a></li>
+                        <li><a href="#menu" class="flex">Track your order</a></li>
+                        <li><a href="#" class="flex">Contact</a></li>
+                        <li>
+                            <ul class="icon">
+                                <li><a href="#" class="flex" id="list"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                                <li><a href="#" class="flex" id="list"><i class="fa-solid fa-user"></i></a></li>
+                                <li><a href="#" class="flex" id="list"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </i>
             <div class="icons">
                 <ul>
                     <li><a href="#" class="flex" id="list"><i class="fa-solid fa-magnifying-glass"></i></a></li>
@@ -57,7 +76,7 @@
 
     <!-- Start landing -->
     <div class="landing">
-        <div class="container">
+        <div class="container align-flex">
             <div class="text flex">
                 <div class="socials flex">
                     <ul class="flex">
@@ -117,7 +136,7 @@
                 <span>Good Food</span>
                 <h2><span>Ch</span>oose Food Iteam</h2>
             </div>
-            <div class="box">
+            <div class="box flex">
                 <img src="../images/choose (1).jpeg" title="Donate" alt="Donate">
                 <img src="../images/choose (2).jpg" title="Burger" alt="Burger">
                 <img src="../images/choose (3).jpeg" title="Salad" alt="Salad">
@@ -135,7 +154,7 @@
                     <img src="../images/taste (2).jpg" class="art" alt="">
                     <img src="../images/taste (1).jpg" alt="">
                 </div>
-                <div class="active">
+                <div class="active justify-flex">
                     <img src="../images/taste (6).jpg" alt="">
                     <img src="../images/taste (3).jpg" alt="">
                     <div>
@@ -153,16 +172,16 @@
                     omnis unde corrupti consectetur dolore ad magni animi a temporibus nemo.
                 </p>
                 <div class="parent">
-                    <div class="icons">
-                        <div class="unit">
+                    <div class="icons between-flex">
+                        <div class="unit flex">
                             <div class="flex"><i class="fa-solid fa-burger flex"></i></div>
                             <span>Fast Food</span>
                         </div>
-                        <div class="unit">
+                        <div class="unit flex">
                             <div class="flex"><i class="fa-solid fa-bowl-food flex"></i></div>
                             <span>Lunch</span>
                         </div>
-                        <div class="unit">
+                        <div class="unit flex">
                             <div class="flex"><i class="fa-solid fa-wine-glass-empty flex"></i></div>
                             <span>Drink</span>
                         </div>
@@ -182,7 +201,7 @@
 
     <!-- Start Rates -->
     <div class="rates flex" id="social">
-        <div class="container">
+        <div class="container between-flex">
             <div class="box">
                 <i class="fa-solid fa-kitchen-set"></i>
                 <div class="text">
@@ -222,7 +241,7 @@
                 <span>Types Of Foods</span>
                 <h2><span>Fr</span>orm Our Menu</h2>
             </div>
-            <ul>
+            <ul class="flex">
                 <li><a href="#">Salad</a></li>
                 <li><a href="#">appetizers</a></li>
                 <li><a href="#">The soup</a></li>
@@ -235,28 +254,28 @@
                 <img src="../images/menu.png" alt="">
                 <div class="box-parent flex">
                     <div class="box-child">
-                        <div class="unit">
+                        <div class="unit align-flex">
                             <img src="../images/candies (1).jpg" alt="">
                             <div>
                                 <h4>Donate</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
                             </div>
                         </div>
-                        <div class="unit">
+                        <div class="unit align-flex">
                             <img src="../images/candies (2).jpg" alt="">
                             <div>
                                 <h4>Donate</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
                             </div>
                         </div>
-                        <div class="unit">
+                        <div class="unit align-flex">
                             <img src="../images/candies (3).jpg" alt="">
                             <div>
                                 <h4></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
                             </div>
                         </div>
-                        <div class="unit">
+                        <div class="unit align-flex">
                             <img src="../images/candies (4).jpg" alt="">
                             <div>
                                 <h4>Donate</h4>
@@ -401,7 +420,7 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit
                         </p>
-                        <div>
+                        <div class="between-flex">
                             <span>Price</span>
                             <span>100$</span>
                         </div>
@@ -413,7 +432,7 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit
                         </p>
-                        <div>
+                        <div class="between-flex">
                             <span>Price</span>
                             <span>90$</span>
                         </div>
@@ -425,7 +444,7 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit
                         </p>
-                        <div>
+                        <div class="between-flex">
                             <span>Price</span>
                             <span>55$</span>
                         </div>
@@ -439,7 +458,7 @@
     <!-- Start Support -->
     <div class="support">
         <div class="container">
-            <div class="box">
+            <div class="box between-flex">
                 <div class="title">
                     <h2><span>Do</span> You Want To Request Support ?</h2>
                     <p>
@@ -457,14 +476,14 @@
 
     <!-- Start Footer -->
     <footer>
-        <div class="container">
+        <div class="container justify-flex">
             <div class="text">
                 <h3>About Us</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus dolores 
                     assumenda sapiente! Cupiditate
                 </p>
-                <div class="contact">
+                <div class="contact align-flex">
                     <div class="flex">
                         <i class="fa-solid fa-phone-volume"></i>
                     </div>
@@ -477,22 +496,22 @@
             <div class="list">
                 <h3>Lorem ipsum dolor</h3>
                 <ul>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Help?</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Apply now</a></li>
+                    <li><a href="#">Agent sign in</a></li>
                 </ul>
             </div>
             <div class="list">
                 <h3>Lorem ipsum dolor</h3>
                 <ul>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Island Tours</a></li>
+                    <li><a href="#">Adventures</a></li>
+                    <li><a href="#">Shows</a></li>
+                    <li><a href="#">Fishing</a></li>
+                    <li><a href="#">Diving Tips</a></li>
+                    <li><a href="#">City Tour</a></li>
                 </ul>
             </div>
             <div class="box">
@@ -522,6 +541,20 @@
         </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- Start My Social -->
+    <div class="my-social">
+        <div class="container between-flex">
+            <span>&copy; 2022 Programming Rights Belong to Waseem Abd Elhadi</span>
+            <ul class="align-flex">
+                <li><a class="flex" href="https://www.facebook.com/waseemabdalhady" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a class="flex" href="https://instagram.com/waseem.abdalhady?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a class="flex" href="https://twitter.com/waseemabdalhady?t=QJAT2PNtrkgWLsMdi1pN5w&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a class="flex" href="https://www.youtube.com/channel/UC7KAR-AOMHIAjq9IgO16NFQ" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End My Social -->
 
 
     <script src="../javascript/foodtruck.js"></script>

@@ -62,18 +62,20 @@ ul {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px dashed var(--white-color);
+    border: 3px solid var(--black-color);
     color: var(--white-color);
     background-color: var(--orange-color);
     font-size: 22px;
     right: 50px;
     bottom: 40px;
     z-index: 500;
+    transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
     .goto-up {
         right: 20px;
+        bottom: 30px;
     }
 }
 
@@ -88,6 +90,10 @@ ul {
     50% {
         transform: translateY(-5px);
     }
+}
+
+.goto-up:hover {
+    border-color: var(--white-color);
 }
 
 /* اعملت هاي علشان بدي اللون اللي ورا يملا الشاشة لكن الكونتنت اللي ورا تملا من الاول للاخر */
@@ -130,7 +136,18 @@ ul {
 
 .align-flex {
     display: flex;
+    align-items: center;
+}
+
+.justify-flex {
+    display: flex;
     justify-content: center;
+}
+
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .title {
@@ -190,18 +207,10 @@ header .container .logo::selection {
 }
 
 header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
 }
 
-@media (max-width: 1189px) {
-    header .container {
-        justify-content: center;
-    }
-}
 
 header .container .logo {
     color: var(--white-color);
@@ -224,13 +233,10 @@ header .container .logo span {
     header .container .logo {
         width: 100%;
         height: 40px;
-        padding-top: 15px;
     }
 }
 
 header nav {
-    display: flex;
-    align-items: center;
     gap: 30px;
 }
 
@@ -255,7 +261,7 @@ header nav .main-nav {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1189px) {
     header nav .main-nav {
         display: none;
     }
@@ -298,23 +304,16 @@ header nav .main-nav > li > a:hover::after {
     width: 50%;
 }
 
-@media (min-width: 991px) {
-    header .bars {
-        display: none;
-    }
-}
-
-header .icons ul {
+header .icons ul,
+header .bars .parent-menu .icon {
     display: flex;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1189px) {
     header .icons {
         display: none;
     }
 }
-
-
 
 header .icons ul > li > a {
     color: var(--white-color);
@@ -322,9 +321,87 @@ header .icons ul > li > a {
     padding: 0 15px;
 }
 
-header .icons ul > li > a:hover {
+header .icons ul > li > a:hover,
+header .bars .parent-menu .icon li a:hover {
     animation: rotate .5s ease-in-out infinite alternate;
 }
+
+@media (min-width: 1190px) {
+    header .bars {
+        display: none;
+    }
+}
+
+@media (max-width: 1189px) {
+    header .bars {
+        color: var(--white-color);
+        font-size: 23px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    header .bars .parent-menu {
+        position: absolute;
+        background-color: var(--white-color);
+        left: -229px;
+        top: 35px;
+        width: 250px;
+        cursor: auto;
+        display: none;
+    }
+
+    header .bars .parent-menu::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -20px;
+        border-style: solid;
+        border-color: transparent transparent var(--white-color) transparent;
+        border-width: 10px;
+    }
+
+    header .bars .parent-menu .child-list {
+        border: 2px solid var(--orange-color);
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    header .bars .parent-menu .child-list li {
+        padding: 15px 0;
+        transition: var(--main-transition);
+    }
+
+    header .bars .parent-menu .child-list li:hover {
+        background-color: var(--orange-color);
+        cursor: pointer;
+    }
+
+    header .bars .parent-menu .child-list li:hover a {
+        color: var(--white-color);
+    }
+
+    header .bars .parent-menu .child-list li a {
+        color: var(--black-color);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        transition: var(--main-transition);
+    }
+
+    header .bars .parent-menu .icon {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    header .bars .parent-menu .icon li {
+        margin-bottom: 0;
+    }
+
+    header .bars .parent-menu .icon li a {
+        font-size: 18px;
+    }
+}
+
 /* End Header */
 
 /******************************************************************************************************/
@@ -336,8 +413,6 @@ header .icons ul > li > a:hover {
 
 .landing .container {
     min-height: calc(100vh - 73.56px);
-    display: flex;
-    align-items: center;
 }
 
 .landing .text {
@@ -611,9 +686,6 @@ header .icons ul > li > a:hover {
 }
 
 .choose .box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 30px;
@@ -698,9 +770,7 @@ header .icons ul > li > a:hover {
 }
 
 .taste .box .active {
-    display: flex;
     align-items: flex-start;
-    justify-content: center;
     gap: 15px;
 }
 
@@ -738,18 +808,12 @@ header .icons ul > li > a:hover {
 }
 
 .taste .icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 25px;
     margin-bottom: 20px;
 }
 
 .taste .icons .unit {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
 }
 
@@ -837,9 +901,6 @@ header .icons ul > li > a:hover {
 }
 
 .rates .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
     position: relative;
@@ -888,9 +949,6 @@ header .icons ul > li > a:hover {
 }
 
 .menu ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
     margin: 20px 0;
@@ -960,8 +1018,6 @@ header .icons ul > li > a:hover {
 
 .menu .box-parent .box-child .unit {
     color: var(--white-color);
-    display: flex;
-    align-items: center;
     gap: 8px;
     cursor: pointer;
     transition: var(--main-transition);
@@ -1199,6 +1255,11 @@ header .icons ul > li > a:hover {
 
 .latest .box .unit {
     border: 1px solid var(--white-color);
+    transition: var(--main-transition);
+}
+
+.latest .box .unit:hover {
+    border-color: var(--orange-color);
 }
 
 .latest .box .unit img {
@@ -1223,21 +1284,24 @@ header .icons ul > li > a:hover {
 }
 
 .latest .box .unit .text div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: var(--white-color);
 }
 
 .latest .box .unit .text div span {
     font-weight: bold;
     font-size: 22px;
+    transition: var(--main-transition);
 }
 
 .latest .box .unit .text div span:last-child {
     color: var(--orange-color);
     font-family: 'Kolker Brush', cursive;
 }
+
+/* .latest .box .unit:hover .text div span:last-child {
+    color: var(--orange-color);
+} */
+
 /* End Latest */
 
 /******************************************************************************************************/
@@ -1250,9 +1314,6 @@ header .icons ul > li > a:hover {
 }
 
 .support .box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 10px;
     max-width: 100%;
     width: 1050px;
@@ -1321,13 +1382,24 @@ footer {
 }
 
 footer .container {
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 footer h3 {
+    width: fit-content;
     margin-bottom: 25px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+footer h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: var(--orange-color);
+    width: 50%;
+    height: 2px;
 }
 
 footer .text {
@@ -1342,8 +1414,6 @@ footer .text p {
 }
 
 footer .text .contact {
-    display: flex;
-    align-items: center;
     gap: 15px;
 }
 
@@ -1412,3 +1482,54 @@ footer .box .unit img {
     width: 50px;
 }
 /* End Footer */
+
+/******************************************************************************************************/
+
+/* Start My Social */
+.my-social {
+    padding: 15px;
+    background-color: var(--orange-color);
+    position: relative;
+}
+
+.my-social .container {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 795px) {
+    .my-social .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.my-social span {
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.my-social ul {
+    gap: 15px;
+}
+
+.my-social ul li a {
+    background-color: var(--white-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+}
+
+.my-social ul li a i {
+    color: var(--black-color);
+    font-weight: 900;
+    font-size: 18px;
+    transition: var(--main-transition);
+}
+
+.my-social ul li:hover i {
+    animation: rotates .5s ease-in-out infinite alternate;
+    color: var(--orange-color);
+}
+/* End My Social */
